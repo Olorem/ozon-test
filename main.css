@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242424;
+}
+
+.component {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 15px;
+  max-width: 568px;
+  max-height: 568px;
+  min-width: 290px;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.progress {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-width: 254px;
+  min-height: 254px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 254px;
+  min-height: 254px;
+}
+
+.controls-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* hiding input type number arrows */
+.controls-value::-webkit-outer-spin-button,
+.controls-value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.controls-value {
+  width: 40px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: auto;
+  text-align: center;
+
+  -moz-appearance: textfield;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.controls-value:invalid {
+  border-color: red;
+}
+
+.control {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.checkbox-real {
+  display: none;
+}
+
+.checkbox-fake {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+}
+
+.checkbox-fake::after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 2px;
+  height: 21px;
+  width: 21px;
+  background-color: #fff;
+  border-radius: 100%;
+  transition: left .25s;
+}
+
+.checkbox-real:checked + .checkbox-fake {
+  background-color: rgb(22, 119, 255);
+}
+
+.checkbox-real:checked + .checkbox-fake::after {
+  left: 17px;
+  transition: left .25s;
+}
+

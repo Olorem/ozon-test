@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="progress.css">
+  <script src="./progress.js"></script>
+  <script src="./main.js"></script>
+</head>
+<body>
+
+    <div class="component">
+      <div class="progress">
+        <div class="title">Progress</div>
+        
+        <!-- Progress component will be inserted into this block -->
+        <div class="canvas-wrapper" id="canvas-wrapper">
+        
+      </div>
+      </div>
+      <div class="controls">
+        <div class="controls-inner">
+          <div class="control">
+            <input 
+              type="number" 
+              class="controls-value controls-value"
+              min="0"
+              max="100"
+              value="0"
+            />
+            <label for="">Value</label>
+          </div>
+          <label class="control">
+            <input type="checkbox" class="checkbox-real" id="animate"/>
+            <div class="checkbox-fake" ></div>
+            Animate
+          </label>
+          <label class="control">
+            <input type="checkbox" class="checkbox-real" id="hide"/>
+            <div class="checkbox-fake"></div>
+            Hide
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+    <div class="component">
+      <div class="progress">
+        <div class="title">Progress</div>
+        <div class="canvas-wrapper" id="canvas-wrapper1">
+      </div>
+      </div>
+      <div class="controls">
+        <div class="controls-inner">
+          <div class="control">
+            <input 
+              type="number" 
+              class="controls-value controls-value"
+              min="0"
+              max="100"
+              value="75"
+            />
+            <label for="">Value</label>
+          </div>
+          <label class="control">
+            <input type="checkbox" class="checkbox-real" id="animate1"/>
+            <div class="checkbox-fake" ></div>
+            Animate
+          </label>
+          <label class="control">
+            <input type="checkbox" class="checkbox-real" id="hide1"/>
+            <div class="checkbox-fake"></div>
+            Hide
+          </label>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

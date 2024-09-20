@@ -1,0 +1,29 @@
+.canvas-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+}
+
+.back-circle, .front-circle {
+  position: absolute; 
+  transform: rotate(-90deg);
+}
+
+.progress-hidden {
+    visibility: hidden;
+}
+
+.progress-animated {
+  animation: 10s infinite linear progress-rotate360;
+}
+
+@keyframes progress-rotate360 {
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(270deg);
+  }
+}
